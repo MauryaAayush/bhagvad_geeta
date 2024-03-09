@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'Views/SelectionScreen.dart';
+import 'Views/bhagvad geeta.dart';
+import 'Views/geeta aarti.dart';
+import 'Views/geeta mahatmy.dart';
+import 'Views/geeta saar.dart';
 import 'Views/mainscreen.dart';
 
 void main() {
@@ -24,7 +27,10 @@ class MyApp extends StatelessWidget {
      initialRoute: '/',
       routes: {
         '/' : (context) => const MainScreen(),
-        '/second' : (context) => const SelectedScreen(),
+        '/first' : (context) => const Bhagvad_geeta(),
+        '/second' : (context) => const Saar(),
+        '/third' : (context) => const Mahatmai(),
+        '/fourth' : (context) => const Aarti(),
       },
     );
   }
