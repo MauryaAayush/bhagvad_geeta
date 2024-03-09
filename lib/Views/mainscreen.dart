@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -14,34 +15,52 @@ class _MainScreenState extends State<MainScreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-        // backgroundColor: Colors.black,
-        body: Column(
-      children: [
-        Stack(
-          children: [
-            Container(
-              height: height * 0.8,
-              width: width * 2,
-              decoration:
-                  const BoxDecoration(color: Colors.yellow, shape: BoxShape.circle),
+      backgroundColor: Color(0xFFFDE3B2),
+      body: Stack(
+        children: [
+          Container(
+            height: height*0.6,
+            width: width,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/images/appBG.png'),
+              fit: BoxFit.cover,
+            )),
+          ),
+
+          Container(
+            width: width,
+            // color: Colors.blue,
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.s,
+              children: [
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: height*0.04),
+                  height: height * 0.3,
+                  width: width * 0.5,
+                  // color: Colors.red,
+                  child: Image.asset(
+                    'assets/images/Geeta_logo.png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Container(
+
+                  height: height,
+                  width: width*0.5,
+                  color: Colors.red,
+
+                ),
+              ],
             ),
-            Container(
-              height: height * 0.3,
-              width: width,
-              decoration: const BoxDecoration(
-                color: Colors.amber,
-              ),
-            ),
-            Container(
-              height: height * 0.2,
-              width: width,
-              decoration: const BoxDecoration(
-                color: Colors.orange,
-              ),
-            ),
-          ],
-        )
-      ],
-    ));
+          )
+
+
+
+
+
+        ],
+      ),
+    );
   }
 }
