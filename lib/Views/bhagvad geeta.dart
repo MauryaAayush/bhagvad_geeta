@@ -29,7 +29,8 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
                 image: DecorationImage(
               image: AssetImage('assets/images/appBG.png'),
               fit: BoxFit.cover,
-            )),
+            )
+            ),
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
