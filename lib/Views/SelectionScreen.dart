@@ -9,6 +9,8 @@ class FinalScreen extends StatefulWidget {
   State<FinalScreen> createState() => _FinalScreenState();
 }
 
+int bhaagIndex = 0;
+
 class _FinalScreenState extends State<FinalScreen> {
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class _FinalScreenState extends State<FinalScreen> {
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Container(
-              height: height*1.5,
+              // height: height*1.5,
               width: width,
               // color: Colors.blue,
               child: Column(
@@ -51,48 +53,18 @@ class _FinalScreenState extends State<FinalScreen> {
                     ),
                   ),
                   Container(
-                    height: height * 0.6,
-                    width: width,
+                    // height: height * 0.6,
+                    // width: width,
                     decoration: BoxDecoration(
                       color: Color(0xFFFEF2DA),
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
-                    child: Container(
-                        margin: EdgeInsets.all(20),
-                        height: height * 0.5,
-                        width: width * 0.8,
-                        decoration: BoxDecoration(
-                            color: Color(0xFFFDB316),
-                            borderRadius: BorderRadius.all(Radius.circular(8)),
-                            border: Border(bottom:BorderSide(width: 10))
-                        ),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Text(
-                                data[3]['index'],
-                                style: TextStyle(
-                                  fontSize: height / 40,
-                                  fontWeight: FontWeight.w300,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
+                    child: Column(
+                      children: [
 
+                        ...List.generate(10, (index) => buildContainer(index))
 
-                            Text(
-                              data[3]['aarti'],
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: height / 55,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ],
-                        )
-
+                      ],
                     ),
                   )
 
@@ -106,5 +78,59 @@ class _FinalScreenState extends State<FinalScreen> {
         ],
       ),
     );
+  }
+
+  Container buildContainer(int index) {
+
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
+    return Container(
+                          margin: EdgeInsets.all(20),
+                          height: height * 0.5,
+                          width: width * 0.8,
+                          decoration: BoxDecoration(
+                              color: Color(0xFFFDB316),
+                              borderRadius: BorderRadius.all(Radius.circular(8)),
+                              border: Border(bottom:BorderSide(width: 10))
+                          ),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Text(
+                                  'Radhey Radhey',
+                                  style: TextStyle(
+                                    fontSize: height / 40,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+
+
+                              // Text(
+                              //   data[0]['bhaags'][index]['name'],
+                              //   textAlign: TextAlign.center,
+                              //   style: TextStyle(
+                              //     fontSize: height / 55,
+                              //     fontWeight: FontWeight.w400,
+                              //     color: Colors.black,
+                              //   ),
+                              // ),
+                              //
+                              // Text(
+                              //   data[0]['bhaags'][index]['shloks'][index],
+                              //   textAlign: TextAlign.center,
+                              //   style: TextStyle(
+                              //     fontSize: height / 55,
+                              //     fontWeight: FontWeight.w400,
+                              //     color: Colors.black,
+                              //   ),
+                              // ),
+                            ],
+                          )
+
+                      );
   }
 }
