@@ -1,144 +1,109 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:gita_book/util/colors/resuable_properties.dart';
-// import 'package:gita_book/util/colors/theme_colors.dart';
-// import 'package:gita_book/util/gita_data.dart';
 
 import '../utils/List.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class FinalScreen extends StatefulWidget {
+  const FinalScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<FinalScreen> createState() => _FinalScreenState();
 }
 
-late double height, width;
-
-class _HomeScreenState extends State<HomeScreen> {
-  // int count = 0;
-
+class _FinalScreenState extends State<FinalScreen> {
   @override
   Widget build(BuildContext context) {
-    height = MediaQuery.of(context).size.height;
-    width = MediaQuery.of(context).size.width;
+
+
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.cyanAccent,
+      backgroundColor: Color(0xFFFDE3B2),
       body: Stack(
         children: [
-          //background image of body
-          bgImgContainer(),
-
-          //titles
-          addColumn(),
-        ],
-      ),
-    );
-  }
-
-  //background image of body
-  bgImgContainer() {
-    return Container(
-      height: 400,
-      color: Colors.cyanAccent,
-      child: Image.asset(
-        'asset/images/appBG.png',
-        width: width,
-        fit: BoxFit.cover,
-      ),
-    );
-  }
-
-//gita text and titles
-  addColumn() {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          //gita text image
-          SizedBox(
-            height: height / 3.5,
-            child: Image.asset(
-              'asset/images/text.png',
-              height: 130,
-              width: 130,
-            ),
-          ),
-
-          //all titles
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 24),
+            height: height*0.6,
             width: width,
             decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Padding(
-              padding:
-              const EdgeInsets.symmetric(vertical: 26.0, horizontal: 16),
-              child: Column(
-                //list of title box using list.generate
-                children:
-                List.generate(data.length, (index) => titleBox(index)),
-              ),
-            ),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/appBG.png'),
+                  fit: BoxFit.cover,
+                )),
           ),
-        ],
-      ),
-    );
-  }
 
-  //title box
-  titleBox(int index) {
-    // if (count == 4) {
-    //   count = 0;
-    // }
-    // count++;
-    return CupertinoButton(
-      onPressed: () {
-        if (index == 0) {
-          Navigator.pushNamed(context, '/chapters');
-        } else if (index == 1) {
-          Navigator.pushNamed(context, '/saar');
-        } else if (index == 2) {
-          Navigator.pushNamed(context, '/maahaatmy');
-        } else if (index == 3) {
-          Navigator.pushNamed(context, '/aaratee');
-        }
-      },
-      pressedOpacity: 0.8,
-      padding: const EdgeInsets.all(0),
-      child: Container(
-        // decoration: containerDeoration(),
-        margin: const EdgeInsets.symmetric(vertical: 5),
-        padding: const EdgeInsets.symmetric(vertical: 3),
-        child: Row(
-          children: [
-            Image.asset(
-              'asset/images/icon${index + 1}.png',
-              height: height / 12,
-              width: 80,
-            ),
-            Container(
-              height: height / 12,
-              width: 1,
-              color: Colors.yellow,
-            ),
-            Expanded(
-              child: Center(
-                child: Text(
-                  data[index]['index'],
-                  style: TextStyle(
-                    fontSize: height / 30,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Container(
+              height: height*1.5,
+              width: width,
+              // color: Colors.blue,
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.s,
+                children: [
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0,height*0.085,0,0),
+                    height: height * 0.21,
+                    width: width * 0.52,
+                    // color: Colors.red,
+                    child: Image.asset(
+                      'assets/images/Geeta_logo.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
+                  Container(
+                    height: height * 0.6,
+                    width: width,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFEF2DA),
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                    ),
+                    child: Container(
+                        margin: EdgeInsets.all(20),
+                        height: height * 0.5,
+                        width: width * 0.8,
+                        decoration: BoxDecoration(
+                            color: Color(0xFFFDB316),
+                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                            border: Border(bottom:BorderSide(width: 10))
+                        ),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Text(
+                                data[3]['index'],
+                                style: TextStyle(
+                                  fontSize: height / 40,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+
+
+                            Text(
+                              data[3]['aarti'],
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: height / 55,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        )
+
+                    ),
+                  )
+
+
+
+                ],
               ),
-            )
-          ],
-        ),
+            ),
+          )
+
+        ],
       ),
     );
   }

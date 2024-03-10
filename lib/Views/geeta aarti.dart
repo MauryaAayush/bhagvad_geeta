@@ -93,46 +93,6 @@ class _AartiState extends State<Aarti> {
                         ],
                       )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                      // ListTile(
-                      //   title: Text(
-                      //     data[3]['index'],
-                      //     style: TextStyle(
-                      //       fontSize: height / 40,
-                      //       fontWeight: FontWeight.w300,
-                      //       color: Colors.black,
-                      //     ),
-                      //     maxLines: 1,  // Set max lines for the title
-                      //     overflow: TextOverflow.ellipsis,  // Set overflow property
-                      //   ),
-                      //   subtitle: Text(
-                      //     data[3]['aarti'],
-                      //     textAlign: TextAlign.center,
-                      //     style: TextStyle(
-                      //       fontSize: height / 50,
-                      //       fontWeight: FontWeight.w400,
-                      //       color: Colors.black,
-                      //     ),
-                      //      // Set max lines for the subtitle
-                      //     overflow: TextOverflow.ellipsis,  // Set overflow property
-                      //   ),
-                      // ),
                     ),
                   )
 
