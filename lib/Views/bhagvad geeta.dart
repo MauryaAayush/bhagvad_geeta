@@ -44,13 +44,7 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                // Container(
-                //
-                //   height: height,
-                //   width: width*0.5,
-                //   color: Colors.red,
-                //
-                // ),
+
               ],
             ),
           )
