@@ -92,9 +92,6 @@ class _AartiState extends State<Aarti> {
                           color: Colors.black,
                         ),
                       ),
-
-
-
                         ],
                       )
 
