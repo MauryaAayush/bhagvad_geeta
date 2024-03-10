@@ -59,7 +59,6 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-
                       InkWell(
                         onTap: () {
                           Navigator.of(context).pushNamed('/first');
@@ -102,132 +101,7 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
                           ),
                         ),
                       ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/second');
-                        },
-                        child: Container(
-                          margin: EdgeInsets.symmetric(
-                              vertical: height * 0.009, horizontal: width * 0.055),
-                          padding: EdgeInsets.symmetric(vertical: height*0.008),
-                          height: height * 0.11,
-                          width: width,
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFFDB316),
-                                Color(0xFFFFFC341)
-                              ]),
-                              borderRadius: BorderRadius.all(Radius.circular(5))
-                          ),
 
-                          child: Row(
-                            children: [
-                              Image.asset(
-                                'assets/images/icon2.png',
-                              ),
-                              VerticalDivider(
-                                color: Colors.black26,
-                              ),
-                              Expanded(
-                                child: Center(
-                                  child: Text(
-                                    data[index + 1]['index'],
-                                    style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/third');
-                        },
-                        child: Container(
-                          margin: EdgeInsets.symmetric(
-                              vertical: height * 0.009, horizontal: width * 0.055),
-                          padding: EdgeInsets.symmetric(vertical: height*0.008),
-                          height: height * 0.11,
-                          width: width,
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFFDB316),
-                                Color(0xFFFFFC341)
-                              ]),
-                              borderRadius: BorderRadius.all(Radius.circular(5))
-                          ),
-
-                          child: Row(
-                            children: [
-                              Image.asset(
-                                'assets/images/icon3.png',
-                              ),
-                              VerticalDivider(
-                                color: Colors.black26,
-                              ),
-                              Expanded(
-                                child: Center(
-                                  child: Text(
-                                    data[index + 2]['index'],
-                                    style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/fourth');
-                        },
-                        child: Container(
-                          margin: EdgeInsets.symmetric(
-                              vertical: height * 0.009, horizontal: width * 0.055),
-                          padding: EdgeInsets.symmetric(vertical: height*0.008),
-                          height: height * 0.11,
-                          width: width,
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFFDB316),
-                                Color(0xFFFFFC341)
-                              ]),
-                              borderRadius: BorderRadius.all(Radius.circular(5))
-                          ),
-
-                          child: Row(
-                            children: [
-                              Image.asset(
-                                'assets/images/icon4.png',
-                              ),
-                              VerticalDivider(
-                                color: Colors.black26,
-                              ),
-                              Expanded(
-                                child: Center(
-                                  child: Text(
-                                    data[index + 3]['index'],
-                                    style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
 
 
 
