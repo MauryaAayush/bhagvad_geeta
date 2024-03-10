@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import '../utils/List.dart';
 
 class MainScreen extends StatefulWidget {
@@ -33,6 +34,7 @@ class _MainScreenState extends State<MainScreen> {
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Container(
+              height: height*1.08,
               width: width,
               // color: Colors.blue,
               child: Column(
