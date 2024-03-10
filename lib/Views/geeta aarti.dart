@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 import '../utils/List.dart';
 
@@ -13,8 +13,6 @@ class Aarti extends StatefulWidget {
 class _AartiState extends State<Aarti> {
   @override
   Widget build(BuildContext context) {
-
-    int index = 3;
 
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
