@@ -13,7 +13,6 @@ class Bhagvad_geeta extends StatefulWidget {
 class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
   @override
   Widget build(BuildContext context) {
-    int index = 0;
 
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;

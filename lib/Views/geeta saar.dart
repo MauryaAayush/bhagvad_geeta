@@ -82,7 +82,7 @@ class _SaarState extends State<Saar> {
   Container buildContainer(int index) {
 
     double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
+
 
 
     return Container(
