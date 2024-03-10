@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 import '../utils/List.dart';
@@ -74,6 +74,8 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
     );
   }
 
+
+
   Container selectContainer(int index) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
@@ -82,7 +84,7 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
       margin: EdgeInsets.symmetric(
           vertical: height * 0.009, horizontal: width * 0.055),
       padding: EdgeInsets.symmetric(vertical: height * 0.008),
-      height: height * 0.11,
+      height: height * 0.1,
       width: width,
       decoration: BoxDecoration(
           gradient:
@@ -91,24 +93,38 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
       child: Row(
         children: [
           Image.asset(
-            'assets/images/icon1.png',
+            'assets/images/icon${(index < 6) ? 1 + index : (index % 6) + 1}.png',
           ),
+
           VerticalDivider(
             color: Colors.black26,
           ),
           Expanded(
-            child: Center(
-              child: Text(
-                data[0]['Bhaags'][index]['name'],
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.black,
+          child: Center(
+           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+                Text(
+                  data[0]['Bhaags'][index]['name'],
+                  style: TextStyle(
+                  fontSize: height / 68,
+                  fontWeight: FontWeight.w300,
+                    color: Colors.black,
+                  ),
+                    ),
+                Text(
+                  data[0]['Bhaags'][index]['name'],
+                  style: TextStyle(
+                    fontSize: height / 40,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.black,
+                  ),
                 ),
-              ),
-            ),
-          )
         ],
+      )
+    )
+    ),
+  ]
       ),
     );
   }

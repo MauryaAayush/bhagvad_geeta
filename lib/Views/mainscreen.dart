@@ -245,3 +245,6 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
+
+
+// data[0]['Bhaags'][index]['name']
