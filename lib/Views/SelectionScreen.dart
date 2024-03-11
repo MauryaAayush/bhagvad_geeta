@@ -86,9 +86,9 @@ class _FinalScreenState extends State<FinalScreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-                          margin: EdgeInsets.all(20),
-                          height: height * 0.5,
-                          width: width * 0.8,
+                          margin: EdgeInsets.all(10),
+                          // height: height * 0.5
+                          // width: width * 0.8,
                           decoration: BoxDecoration(
                               color: Color(0xFFFDB316),
                               borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -99,35 +99,55 @@ class _FinalScreenState extends State<FinalScreen> {
                               Padding(
                                 padding: const EdgeInsets.all(10),
                                 child: Text(
-                                  'Radhey Radhey',
+                                  data[0]['Bhaags'][bhaagIndex]['id'],
                                   style: TextStyle(
-                                    fontSize: height / 40,
+                                    fontSize: height / 65,
                                     fontWeight: FontWeight.w300,
                                     color: Colors.black,
                                   ),
                                 ),
                               ),
 
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Text(
+                                  data[0]['Bhaags'][bhaagIndex]['name'],
+                                  style: TextStyle(
+                                    fontSize: height / 45,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
 
-                              // Text(
-                              //   data[0]['bhaags'][index]['name'],
-                              //   textAlign: TextAlign.center,
-                              //   style: TextStyle(
-                              //     fontSize: height / 55,
-                              //     fontWeight: FontWeight.w400,
-                              //     color: Colors.black,
-                              //   ),
-                              // ),
-                              //
-                              // Text(
-                              //   data[0]['bhaags'][index]['shloks'][index],
-                              //   textAlign: TextAlign.center,
-                              //   style: TextStyle(
-                              //     fontSize: height / 55,
-                              //     fontWeight: FontWeight.w400,
-                              //     color: Colors.black,
-                              //   ),
-                              // ),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Text(
+                                  data[0]['Bhaags'][bhaagIndex]['shloks'][index]['shlok'],
+                                  style: TextStyle(
+                                    fontSize: height / 45,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.black,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+
+
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Text(
+                                  data[0]['Bhaags'][bhaagIndex]['shloks'][index]['meaning'],
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: height / 55,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+
+
                             ],
                           )
 

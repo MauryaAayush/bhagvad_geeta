@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       ),
      initialRoute: '/splash',
       routes: {
-        '/' : (context) => const MainScreen(),
+        '/home' : (context) => const MainScreen(),
         '/splash' : (context) => const Splashscreen(),
         '/first' : (context) => const Bhagvad_geeta(),
         '/second' : (context) => const Saar(),
