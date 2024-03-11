@@ -88,12 +88,15 @@ class _FinalScreenState extends State<FinalScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              data[0]['Bhaags'][bhaagIndex]['id'],
-              style: TextStyle(
-                fontSize: height / 65,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: Text(
+                data[0]['Bhaags'][bhaagIndex]['id'],
+                style: TextStyle(
+                  fontSize: height / 65,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF2E2E2E),
+                ),
               ),
             ),
             Text(
@@ -101,7 +104,7 @@ class _FinalScreenState extends State<FinalScreen> {
               style: TextStyle(
                 fontSize: height / 45,
                 fontWeight: FontWeight.w400,
-                color: Colors.black,
+                color: Color(0xFF2E2E2E),
               ),
             ),
             Padding(
@@ -111,7 +114,7 @@ class _FinalScreenState extends State<FinalScreen> {
                 style: TextStyle(
                   fontSize: height / 45,
                   fontWeight: FontWeight.w400,
-                  color: Colors.black,
+                  color: Color(0xFF2E2E2E),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -136,7 +139,7 @@ class _FinalScreenState extends State<FinalScreen> {
                 style: TextStyle(
                   fontSize: height / 45,
                   fontWeight: FontWeight.w400,
-                  color: Colors.black,
+                  color: Color(0xFF2E2E2E),
                 ),
               ),
             ),
@@ -145,7 +148,7 @@ class _FinalScreenState extends State<FinalScreen> {
               height: height * 0.05,
               width: width,
               decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: Color(0xFF2F2D32),
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(5),
                       bottomRight: Radius.circular(5))),
