@@ -53,6 +53,7 @@ class _FinalScreenState extends State<FinalScreen> {
                     // height: height * 0.6,
                     // width: width,
                     padding: EdgeInsets.fromLTRB(0, 25, 0, 10),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 100),
                     decoration: BoxDecoration(
                       color: Color(0xFFFEF2DA),
                       borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -88,27 +89,31 @@ class _FinalScreenState extends State<FinalScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-              child: Text(
-                data[0]['Bhaags'][bhaagIndex]['id'],
+            if (index == 0)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                child: Text(
+                  data[0]['Bhaags'][bhaagIndex]['id'],
+                  style: TextStyle(
+                    fontSize: height / 65,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xFF2E2E2E),
+                  ),
+                ),
+              ),
+
+            if (index == 0)
+              Text(
+                data[0]['Bhaags'][bhaagIndex]['name'],
                 style: TextStyle(
-                  fontSize: height / 65,
+                  fontSize: height / 45,
                   fontWeight: FontWeight.w400,
                   color: Color(0xFF2E2E2E),
                 ),
               ),
-            ),
-            Text(
-              data[0]['Bhaags'][bhaagIndex]['name'],
-              style: TextStyle(
-                fontSize: height / 45,
-                fontWeight: FontWeight.w400,
-                color: Color(0xFF2E2E2E),
-              ),
-            ),
+
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
+              padding: const EdgeInsets.symmetric(vertical: 20),
               child: Text(
                 data[0]['Bhaags'][bhaagIndex]['shloks'][index]['shlok'],
                 style: TextStyle(
@@ -123,7 +128,7 @@ class _FinalScreenState extends State<FinalScreen> {
             Container(
               height: height * 0.001,
               width: width * 0.9,
-              color: Colors.black45,
+              color: Colors.black26,
             ),
 
             // VerticalDivider(
