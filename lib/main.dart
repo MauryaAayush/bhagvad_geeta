@@ -6,6 +6,7 @@ import 'Views/geeta aarti.dart';
 import 'Views/geeta mahatmy.dart';
 import 'Views/geeta saar.dart';
 import 'Views/mainscreen.dart';
+import 'Views/splashscreen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -25,9 +26,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-     initialRoute: '/final',
+     initialRoute: '/splash',
       routes: {
         '/' : (context) => const MainScreen(),
+        '/splash' : (context) => const Splashscreen(),
         '/first' : (context) => const Bhagvad_geeta(),
         '/second' : (context) => const Saar(),
         '/third' : (context) => const Mahatmai(),

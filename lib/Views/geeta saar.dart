@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../utils/List.dart';
 
 class Saar extends StatefulWidget {
@@ -16,13 +15,13 @@ class _SaarState extends State<Saar> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color(0xFFFDE3B2),
+      backgroundColor: const Color(0xFFFDE3B2),
       body: Stack(
         children: [
           Container(
             height: height * 0.6,
             width: width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
               image: AssetImage('assets/images/appBG.png'),
               fit: BoxFit.cover,
@@ -34,7 +33,6 @@ class _SaarState extends State<Saar> {
               width: width,
               // color: Colors.blue,
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.s,
                 children: [
                   Container(
                     margin: EdgeInsets.fromLTRB(0, height * 0.085, 0, 0),
@@ -47,7 +45,8 @@ class _SaarState extends State<Saar> {
                     ),
                   ),
                   Container(
-                    // height: height * 0.6,
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 100),
+                    padding: EdgeInsets.fromLTRB(10, 25, 10, 10),
                     width: width,
                     decoration: BoxDecoration(
                       color: Color(0xFFFEF2DA),
@@ -77,12 +76,12 @@ class _SaarState extends State<Saar> {
 
     return Container(
         padding: EdgeInsets.all(20),
-        margin: EdgeInsets.all(20),
+        margin: EdgeInsets.symmetric(vertical: 6),
         // height: height * 0.5,
         width: double.infinity,
         decoration: BoxDecoration(
             color: Color(0xFFFDB316),
-            borderRadius: BorderRadius.all(Radius.circular(8)),
+            borderRadius: BorderRadius.all(Radius.circular(5)),
             border: Border(bottom: BorderSide(width: 10))),
         child: Column(
           children: [
