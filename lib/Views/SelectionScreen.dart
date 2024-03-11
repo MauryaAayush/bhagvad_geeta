@@ -59,7 +59,9 @@ class _FinalScreenState extends State<FinalScreen> {
                     ),
                     child: Column(
                       children: [
-                        ...List.generate(data[0]['Bhaags'][bhaagIndex]['shloks'].length, (index) => buildContainer(index))
+                        ...List.generate(
+                            data[0]['Bhaags'][bhaagIndex]['shloks'].length,
+                            (index) => buildContainer(index))
                       ],
                     ),
                   )
@@ -76,15 +78,13 @@ class _FinalScreenState extends State<FinalScreen> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
-
-
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 0),
-        margin: EdgeInsets.symmetric(vertical: 5,horizontal: 8),
+        padding: EdgeInsets.symmetric(vertical: 0),
+        margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
         decoration: BoxDecoration(
-            color: Color(0xFFFDB316),
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-            ),
+          color: Color(0xFFFDB316),
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -118,8 +118,8 @@ class _FinalScreenState extends State<FinalScreen> {
             ),
 
             Container(
-              height: height*0.001,
-              width: width*0.9,
+              height: height * 0.001,
+              width: width * 0.9,
               color: Colors.black45,
             ),
 
@@ -142,25 +142,30 @@ class _FinalScreenState extends State<FinalScreen> {
             ),
 
             Container(
-              height: height*0.05,
+              height: height * 0.05,
               width: width,
               decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5),bottomRight: Radius.circular(5))
-              ),
+                  color: Colors.black,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(5),
+                      bottomRight: Radius.circular(5))),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                    Text('Copy',style: TextStyle(
-                      color: Color(0xFFFDB316),
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600
-                    ),),
-                    Text('Share',style:TextStyle(
-                      color: Color(0xFFFDB316),
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600
-                    ),),
+                  Text(
+                    'Copy',
+                    style: TextStyle(
+                        color: Color(0xFFFDB316),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  Text(
+                    'Share',
+                    style: TextStyle(
+                        color: Color(0xFFFDB316),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ],
               ),
             )
