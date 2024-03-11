@@ -14,7 +14,7 @@ class _SplashscreenState extends State<Splashscreen> {
   Widget build(BuildContext context) {
 
     Timer(Duration(seconds: 3),() {
-      Navigator.of(context).pushNamed('/');
+      Navigator.of(context).pushNamed('/home');
     },);
 
 
