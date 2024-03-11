@@ -47,7 +47,7 @@ class _MahatmaiState extends State<Mahatmai> {
                     ),
                   ),
                   Container(
-                    height: height * 2.85,
+                    // height: height * 2.85,
                     width: width,
                     decoration: BoxDecoration(
                       color: Color(0xFFFEF2DA),
@@ -56,7 +56,7 @@ class _MahatmaiState extends State<Mahatmai> {
                     child: Container(
                         margin: EdgeInsets.fromLTRB(10, 25, 10, 15),
                         padding: EdgeInsets.all(10),
-                        height: height * 2.75,
+                        // height: height * 2.75,
                         width: width * 0.8,
                         decoration: BoxDecoration(
                             color: Color(0xFFFDB316),
