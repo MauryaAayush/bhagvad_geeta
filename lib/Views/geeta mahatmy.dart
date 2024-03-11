@@ -31,7 +31,8 @@ class _MahatmaiState extends State<Mahatmai> {
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Container(
-              height: height * 3.29,
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 200),
+              // height: height * 3.29,
               width: width,
               // color: Colors.blue,
               child: Column(
