@@ -31,14 +31,12 @@ class _SaarState extends State<Saar> {
             scrollDirection: Axis.vertical,
             child: Container(
               width: width,
-              // color: Colors.blue,
               child: Column(
                 children: [
                   Container(
                     margin: EdgeInsets.fromLTRB(0, height * 0.085, 0, 0),
                     height: height * 0.21,
                     width: width * 0.52,
-                    // color: Colors.red,
                     child: Image.asset(
                       'assets/images/Geeta_logo.png',
                       fit: BoxFit.cover,
