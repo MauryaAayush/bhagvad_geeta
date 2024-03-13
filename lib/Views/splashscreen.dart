@@ -12,11 +12,12 @@ class Splashscreen extends StatefulWidget {
 class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
-
-    Timer(Duration(seconds: 3),() {
-      Navigator.of(context).pushNamed('/home');
-    },);
-
+    Timer(
+      Duration(seconds: 3),
+      () {
+        Navigator.of(context).pushNamed('/home');
+      },
+    );
 
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
