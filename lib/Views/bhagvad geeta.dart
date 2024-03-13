@@ -23,7 +23,7 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
           Container(
             height: height * 0.6,
             width: width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
               image: AssetImage('assets/images/appBG.png'),
               fit: BoxFit.cover,
@@ -31,11 +31,9 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            child: Container(
+            child: SizedBox(
               width: width,
-              // color: Colors.blue,
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.s,
                 children: [
                   Container(
                     margin:
@@ -49,9 +47,9 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(0, 40, 0, 40),
+                    padding: const EdgeInsets.fromLTRB(0, 40, 0, 40),
                     width: width * 0.85,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFFEF2DA),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
@@ -87,15 +85,15 @@ class _Bhagvad_geetaState extends State<Bhagvad_geeta> {
         padding: EdgeInsets.symmetric(vertical: height * 0.008),
         height: height * 0.1,
         width: width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient:
-                LinearGradient(colors: [Color(0xFFFDB316), Color(0xFFFFFC341)]),
+                LinearGradient(colors: [Color(0xFFFDB316), Color(0xfffffc341)]),
             borderRadius: BorderRadius.all(Radius.circular(5))),
         child: Row(children: [
           Image.asset(
             'assets/images/icon${(index < 6) ? 1 + index : (index % 6) + 1}.png',
           ),
-          VerticalDivider(
+          const VerticalDivider(
             color: Colors.black26,
           ),
           Expanded(
