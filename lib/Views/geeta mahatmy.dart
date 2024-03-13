@@ -31,7 +31,7 @@ class _MahatmaiState extends State<Mahatmai> {
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 200),
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 200),
               // height: height * 3.29,
               width: width,
               // color: Colors.blue,
@@ -50,7 +50,7 @@ class _MahatmaiState extends State<Mahatmai> {
                   Container(
                     // height: height * 2.85,
                     width: width,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFFEF2DA),
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
