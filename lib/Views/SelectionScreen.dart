@@ -18,13 +18,13 @@ class _FinalScreenState extends State<FinalScreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color(0xFFFDE3B2),
+      backgroundColor: const Color(0xFFFDE3B2),
       body: Stack(
         children: [
           Container(
             height: height * 0.6,
             width: width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
               image: AssetImage('assets/images/appBG.png'),
               fit: BoxFit.cover,
@@ -32,12 +32,9 @@ class _FinalScreenState extends State<FinalScreen> {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            child: Container(
-              // height: height*1.5,
+            child: SizedBox(
               width: width,
-              // color: Colors.blue,
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.s,
                 children: [
                   Container(
                     margin: EdgeInsets.fromLTRB(0, height * 0.085, 0, 0),
@@ -50,11 +47,9 @@ class _FinalScreenState extends State<FinalScreen> {
                     ),
                   ),
                   Container(
-                    // height: height * 0.6,
-                    // width: width,
-                    padding: EdgeInsets.fromLTRB(0, 25, 0, 10),
-                    margin: EdgeInsets.fromLTRB(0, 0, 0, 100),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.fromLTRB(0, 25, 0, 10),
+                    margin: const EdgeInsets.fromLTRB(0, 0, 0, 100),
+                    decoration: const BoxDecoration(
                       color: Color(0xFFFEF2DA),
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
@@ -80,9 +75,9 @@ class _FinalScreenState extends State<FinalScreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-        padding: EdgeInsets.symmetric(vertical: 0),
-        margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.symmetric(vertical: 0),
+        margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+        decoration: const BoxDecoration(
           color: Color(0xFFFDB316),
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
