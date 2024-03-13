@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+
+import 'package:flutter/material.dart' show AssetImage, Axis, Border, BorderRadius, BorderSide, BoxDecoration, BoxFit, BuildContext, Color, Colors, Column, Container, DecorationImage, EdgeInsets, FontWeight, Image, MediaQuery, Padding, Radius, Scaffold, SingleChildScrollView, SizedBox, Stack, State, StatefulWidget, Text, TextAlign, TextStyle, Widget;
 
 import '../utils/List.dart';
 
@@ -30,7 +31,7 @@ class _SaarState extends State<Saar> {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            child: Container(
+            child: SizedBox(
               width: width,
               child: Column(
                 children: [
@@ -74,11 +75,11 @@ class _SaarState extends State<Saar> {
     // double width = MediaQuery.of(context).size.width;
 
     return Container(
-        padding: EdgeInsets.all(20),
-        margin: EdgeInsets.symmetric(vertical: 6),
+        padding: const EdgeInsets.all(20),
+        margin: const EdgeInsets.symmetric(vertical: 6),
         // height: height * 0.5,
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             color: Color(0xFFFDB316),
             borderRadius: BorderRadius.all(Radius.circular(5)),
             border: Border(bottom: BorderSide(width: 10))),
