@@ -15,7 +15,7 @@ class _SplashscreenState extends State<Splashscreen> {
     Timer(
       const Duration(seconds: 3),
       () {
-        Navigator.of(context).pushNamed('/home');
+        Navigator.of(context).pushReplacementNamed('/home');
       },
     );
 
@@ -26,7 +26,7 @@ class _SplashscreenState extends State<Splashscreen> {
         body: Center(
             child: InkWell(
       onTap: () {
-        Navigator.of(context).pushNamed('/');
+        Navigator.of(context).pushReplacementNamed('/');
       },
       child: Container(
           height: height,
