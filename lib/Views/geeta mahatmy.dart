@@ -55,11 +55,11 @@ class _MahatmaiState extends State<Mahatmai> {
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
                     child: Container(
-                        margin: EdgeInsets.fromLTRB(10, 25, 10, 15),
-                        padding: EdgeInsets.all(10),
+                        margin: const EdgeInsets.fromLTRB(10, 25, 10, 15),
+                        padding: const EdgeInsets.all(10),
                         // height: height * 2.75,
                         width: width * 0.8,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0xFFFDB316),
                             borderRadius: BorderRadius.all(Radius.circular(5)),
                             border: Border(bottom: BorderSide(width: 10))),
