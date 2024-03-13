@@ -92,7 +92,7 @@ class _FinalScreenState extends State<FinalScreen> {
                   style: TextStyle(
                     fontSize: height / 65,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xFF2E2E2E),
+                    color: const Color(0xFF2E2E2E),
                   ),
                 ),
               ),
