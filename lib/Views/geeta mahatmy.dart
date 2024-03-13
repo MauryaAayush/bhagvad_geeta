@@ -16,13 +16,13 @@ class _MahatmaiState extends State<Mahatmai> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color(0xFFFDE3B2),
+      backgroundColor: const Color(0xFFFDE3B2),
       body: Stack(
         children: [
           Container(
             height: height * 0.6,
             width: width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
               image: AssetImage('assets/images/appBG.png'),
               fit: BoxFit.cover,
